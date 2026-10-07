@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="25A354" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ExerciseEntity" representedClassName="ExerciseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="progressionIncrementKg" attributeType="Double" defaultValueString="2.5" usesScalarValueType="YES"/>
+        <relationship name="goals" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LiftGoalEntity" inverseName="exercise" inverseEntity="LiftGoalEntity"/>
+        <relationship name="sets" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ExerciseSetEntity" inverseName="exercise" inverseEntity="ExerciseSetEntity"/>
+    </entity>
+    <entity name="ExerciseSetEntity" representedClassName="ExerciseSetEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="loggedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="reps" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="weightKg" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExerciseEntity" inverseName="sets" inverseEntity="ExerciseEntity"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkoutSessionEntity" inverseName="sets" inverseEntity="WorkoutSessionEntity"/>
+    </entity>
+    <entity name="LiftGoalEntity" representedClassName="LiftGoalEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="achievedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="plannedCompletionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="sessionsPerWeek" attributeType="Integer 16" defaultValueString="2" usesScalarValueType="YES"/>
+        <attribute name="setAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="startingEstimatedMaxKg" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="targetWeightKg" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExerciseEntity" inverseName="goals" inverseEntity="ExerciseEntity"/>
+    </entity>
+    <entity name="WorkoutSessionEntity" representedClassName="WorkoutSessionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="finishedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="startedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="sets" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ExerciseSetEntity" inverseName="session" inverseEntity="ExerciseSetEntity"/>
+    </entity>
+</model>
