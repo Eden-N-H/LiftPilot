@@ -1,9 +1,5 @@
-//
 //  LiftPilotWidgetBundle.swift
-//  LiftPilotWidget
-//
-//  Created by Eden Hallett on 7/10/2026.
-//
+//  Target membership: LiftPilotWidget
 
 import WidgetKit
 import SwiftUI
@@ -12,7 +8,5 @@ import SwiftUI
 struct LiftPilotWidgetBundle: WidgetBundle {
     var body: some Widget {
         LiftPilotWidget()
-        LiftPilotWidgetControl()
-        LiftPilotWidgetLiveActivity()
     }
 }
