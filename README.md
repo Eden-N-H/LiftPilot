@@ -130,7 +130,7 @@ CloudKit would add an iCloud account requirement and sync complexity that the us
 3. If you change the App Group, update it in the app and widget targets **and** in `Shared/AppGroup.swift`.
 4. Select the **LiftPilot** scheme and an iPhone simulator, then run (⌘R). Allow notifications when asked.
 5. To see forecasts, charts and the widget straight away, go to **Settings → Load Sample Training History**. This adds six weeks of bench press workouts and a 102.5 kg goal.
-6. Run the unit tests with ⌘U (29 tests, using the mock repository rather than Core Data).
+6. Run the unit tests with ⌘U (32 tests, using the mock repository rather than Core Data).
 
 **Trying the extensions**
 
