@@ -64,6 +64,7 @@
 		326268003075F28B00E7CF8E /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		326268023075F28B00E7CF8E /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		326268133075F33E00E7CF8E /* LiftPilotWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiftPilotWidgetExtension.entitlements; sourceTree = "<group>"; };
+		326268C93076011500E7CF8E /* LiftPilot.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = LiftPilot.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -156,6 +157,7 @@
 		326267A83075F12200E7CF8E = {
 			isa = PBXGroup;
 			children = (
+				326268C93076011500E7CF8E /* LiftPilot.xctestplan */,
 				326268133075F33E00E7CF8E /* LiftPilotWidgetExtension.entitlements */,
 				326267B33075F12200E7CF8E /* LiftPilot */,
 				326267C13075F12400E7CF8E /* LiftPilotTests */,

@@ -12,7 +12,13 @@
 
   },
   "testTargets" : [
-
+    {
+      "target" : {
+        "containerPath" : "container:LiftPilot.xcodeproj",
+        "identifier" : "326267BD3075F12400E7CF8E",
+        "name" : "LiftPilotTests"
+      }
+    }
   ],
   "version" : 1
 }
