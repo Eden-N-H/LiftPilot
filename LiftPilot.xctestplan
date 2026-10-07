@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "D9C25B54-C444-4EBB-B677-29FBA7D62934",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:LiftPilot.xcodeproj",
+        "identifier" : "326267BD3075F12400E7CF8E",
+        "name" : "LiftPilotTests"
+      }
+    }
+  ],
+  "version" : 1
+}
